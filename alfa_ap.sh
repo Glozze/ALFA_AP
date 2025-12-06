@@ -9,7 +9,7 @@ DRIVER_REPO="https://github.com/morrownr/7612u.git"
 
 # Check for root permissions
 if [ "$EUID" -ne 0 ]; then
-    echo "❌ Error: Please run this script with sudo: sudo ./start_alfa_ap.sh"
+    echo " !! Error: Please run this script with sudo: sudo ./start_alfa_ap.sh"
     exit 1
 fi
 
@@ -66,7 +66,7 @@ EOL
     touch $SETUP_FLAG
 
     echo -e "\n=========================================================================="
-    echo "✅ CONFIGURATION AND DRIVER INSTALLATION COMPLETE."
+    echo "  CONFIGURATION AND DRIVER INSTALLATION COMPLETE."
     echo "    >> It is MANDATORY to REBOOT the system to load the new driver."
     echo "    >> Please run: sudo reboot"
     echo "    >> After rebooting, run this script ONE MORE TIME to start the AP."
@@ -110,7 +110,7 @@ systemctl restart dnsmasq
 
 # 5. Start Hostapd
 echo -e "\n=========================================================================="
-echo "🚀 STARTING HOSTAPD! The AP '${USER_SSID}' should now be active."
+echo "  STARTING HOSTAPD! The AP '${USER_SSID}' should now be active."
 echo "    Press Ctrl+C in this window to stop the AP and return the terminal."
 echo "=========================================================================="
 
