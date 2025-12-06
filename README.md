@@ -12,6 +12,7 @@ Follow the Steps:
 3. cd Downloads //Or the folder you saved the file
 5. chmod +x alfa_ap.sh //Give privileges to the script
 6. sudo ./alfa_ap.sh
+7. Follow the instrucctions, you'll need to reboot.
 ------------------------
 
 Start Learning!!
