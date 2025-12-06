@@ -67,9 +67,9 @@ EOL
 
     echo -e "\n=========================================================================="
     echo "  CONFIGURATION AND DRIVER INSTALLATION COMPLETE."
-    echo "    >> It is MANDATORY to REBOOT the system to load the new driver."
-    echo "    >> Please run: sudo reboot"
-    echo "    >> After rebooting, run this script ONE MORE TIME to start the AP."
+    echo "     >> It is MANDATORY to REBOOT the system to load the new driver."
+    echo "     >> Please run: sudo reboot"
+    echo "     >> After rebooting, run this script ONE MORE TIME to start the AP."
     echo "=========================================================================="
     exit 0
 fi
@@ -95,7 +95,17 @@ ip link set dev ${AP_INTERFACE} up
 
 # 3. Apply NAT rules (Routing) 
 
-[Image of Network Address Translation (NAT) diagram]
+# --- ASCII ART: THE CROSS WITH MACOS-STYLE WIFI SIGNAL ---
+echo -e "\n"
+echo "        (   )"
+echo "       ( ( ( ) )"
+echo "      ( ( ( ( ) ) )"
+echo "   | | | | | | | | |"
+echo "   ============="
+echo "        ||"
+echo "        ||"
+echo "        ||"
+echo -e "\n"
 
 echo "Configuring NAT (Internet Routing)..."
 echo 1 > /proc/sys/net/ipv4/ip_forward
@@ -111,7 +121,7 @@ systemctl restart dnsmasq
 # 5. Start Hostapd
 echo -e "\n=========================================================================="
 echo "  STARTING HOSTAPD! The AP '${USER_SSID}' should now be active."
-echo "    Press Ctrl+C in this window to stop the AP and return the terminal."
+echo "     Press Ctrl+C in this window to stop the AP and return the terminal."
 echo "=========================================================================="
 
 # Execute hostapd
