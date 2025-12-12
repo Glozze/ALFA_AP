@@ -97,14 +97,7 @@ ip link set dev ${AP_INTERFACE} up
 
 # --- ASCII ART: THE CROSS WITH MACOS-STYLE WIFI SIGNAL ---
 echo -e "\n"
-echo "        (   )"
-echo "       ( ( ( ) )"
-echo "      ( ( ( ( ) ) )"
-echo "   | | | | | | | | |"
-echo "   ============="
-echo "        ||"
-echo "        ||"
-echo "        ||"
+
 echo -e "\n"
 
 echo "Configuring NAT (Internet Routing)..."
